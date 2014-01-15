@@ -1,140 +1,38 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain) */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*---------------------------------*/
-
 body {
 	background-color: #eeeeee;
 }
 
 header {
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 header h1 {
 	padding-top: 15px;
 	font-family: "Crimson-Semibold", "Times New Roman", Georgia, serif;
 	font-size: 48px;
-	color:#00d;
+	color:#44f;
 }
 
-#topListSidebar {
-	position: absolute;
-	width:25%;
-}
-
-#topItemList {
-	position: absolute;
-	left: 25%;
-}
-
+/* The main shopping div */
 #shoppingList {
 	position: relative;
 	height:100%;
 	font-family: verdana,helvetica,arial,sans-serif;
-	margin-left: 30px;
-	min-width: 450px;
+	margin-left: 40px;
+	font-size: 18px;
 }
 
-#listSidebar {
-	position: absolute;
-	left:0;
-	box-shadow: 3px 3px 10px rgba(50, 50, 50, 0.1);
-	/*border:1px solid #aaaaaa;*/
-	border-radius: 20px;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	border-left: transparent;
-	width:25%;
-	background-color: #ffffff;
-	min-height:300px;
-	min-width: 100px;
-}
-
-	#lists {
-		margin:10px 5px 10px 20px;
-		font-size: 16px;
-	}
-
-	#lists .list {
-		margin-bottom: 8px;
-		cursor: pointer;
-	}
-
-	img {
-		position: absolute;
-		bottom: 0;
-		left:0;
+	#shoppingList img {
 		height:24px;
 		width: 24px;
-		margin-bottom: 5px;
-		margin-left: 20px;
-		cursor:pointer;
+		cursor: pointer;			
 	}
 
-#itemList {
-	position: absolute;
-	left:25%;
-	right: 0;
-	margin:-30px 20px 0 20px;
-	font-size: 12px;
-	/*min-width: 400px;*/
-}
-
-	#currentList {
-		color:#232323;
-		font-size: 20px;
-		text-align: center;
-		padding-bottom: 10px;
-		height: 20px;
-	}
-
+	/* The form where items are added to the shopping list */
 	#addSection {
 		position: relative;
-		height: 20px;
+		height: 27px;
 		margin-bottom: 15px;
 	}
 
@@ -149,23 +47,33 @@ header h1 {
 		#addItemButton {
 			display: inline-block;
 			vertical-align: middle;
-			padding: 6px 7px;
-			border: 1px solid #aaa;
-			border-radius: 5px;
-			background-color: #fff;
-			text-align: center;
-			cursor: pointer;
 		}
 
-	#items li {
-		margin-bottom: 5px;
+	/* The area where the items are displayed */
+	#itemsDiv {
 	}
 
-	#items li label.checked {
-		text-decoration: line-through;
-		color:#999;
-	}
+		#icons {
+			position: relative;
+			width:75%;
+			/*height:24px;*/
+		}
 
+			#icons img {
+				float:right;
+				margin-left: 10px;
+			}
+
+		#items li {
+			margin-bottom: 5px;
+		}
+
+		#items li label.checked {
+			text-decoration: line-through;
+			color:#999;
+		}
+
+/* Used to style the jQuery tooptip */
 .ui-tooltip {
 	font-size: 9px;
 }

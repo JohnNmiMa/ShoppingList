@@ -3,6 +3,7 @@
 	<head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>John's Shopping Lists</title>
 		<link href="css/smooth/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="reset.css">
 		<link type="text/css" rel="stylesheet" href="main.css">
 		<script src="js/jquery-1.9.1.js"></script>
 		<script src="js/jquery-ui-1.10.3.custom.js"></script>
@@ -10,27 +11,23 @@
 	</head>
 	<body>
 		<header>
-			<h1>Shopping Lists</h1>
+			<h1>Let's Shop</h1>
 		</header>
 		<div id="shoppingList">
-			<section id="listSidebar">
-				<ul id="lists">
-				</ul>
-				<img src="plus.png" title="Create a new list">
-			</section>
-			<section id="itemList">
-				<h1 id="currentList"></h1>
-				<form>
-					<div id="addSection">
-							<input id="addItemText" type="text" name="addItem" autocomplete="off" placeholder="Create a new item...">
-							<div id="addItemButton" title="Add a new item">+Add</div>
-					</div>
-				</form>
-				<div>
-					<ul id="items">
-					</ul>
+			<form>
+				<div id="addSection">
+						<input id="addItemText" type="text" name="addItem" autocomplete="off" placeholder="Create a new item...">
+						<img id="addItemButton" src="plus.png" title="Add a new item">
 				</div>
-			</section>
+			</form>
+			<div id="itemsDiv">
+				<div id="icons">
+					<img id="clearList" src="trash.ico" title="Clear the list">
+					<img id="clearChecked" src="checkbox.ico" title="Clear all checked items">
+				</div>
+				<ul id="items">
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>
