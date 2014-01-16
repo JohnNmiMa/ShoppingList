@@ -26,7 +26,8 @@ $(document).ready(function() {
 		$(parent).toggleClass('checked');
 	});
 
-	function addItem(itemText) {
+	function addItem() {
+		var itemText = $('#addItemText').val();
 		try {
 			if (validateItem(itemText) == false)
 				throw {name:"Note", message:"Empty item string"};
@@ -38,17 +39,8 @@ $(document).ready(function() {
 		}
 	}
 
-	$('#addItemButton').click(function(event) {
-		var itemText = $('#addItemText').val();
-		addItem(itemText);
-		return true;
-	});
-
-	$('form').submit(function(event) {
-		var itemText = $('#addItemText').val();
-		addItem(itemText);
-		return true;
-	});
+	$('#addItemButton').click(addItem);
+	$('form').submit(addItem);
 
 	$('#clearList').click(function () {
 		if ($('#items li').length > 0) {
